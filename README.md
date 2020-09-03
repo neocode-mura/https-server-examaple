@@ -14,4 +14,6 @@
 
 sdkconfig→Example Connection Exampleのmyssidとmypasswordはご自身の環境のSSIDとPasswordを入力してください。
 
-cacert.pemとprivate.pemはTemplateに入っているものなのでhttps://neocode.jp/2020/09/02/esp32-wroberttgo-camerahttps-serverpcsslesp-idf-eclipse/を参考に自分自身で作ってみてください。
+cacert.pemとprivate.pemはTemplateに入っているものなので
+https://neocode.jp/2020/09/02/esp32-wroberttgo-camerahttps-serverpcsslesp-idf-eclipse/
+を参考に自分自身で作ってみてください。
