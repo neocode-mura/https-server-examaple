@@ -1,26 +1,17 @@
-# HTTP server with SSL support using OpenSSL
+# HTTPS Server Example
 
-This example creates a SSL server that returns a simple HTML page when you visit its root URL.
+##### ESP32-WROVER(TTGO Camera)でHTTPS Serverを立ち上げPCとSSL通信をする(開発環境ESP-IDF & Eclipse)
+  
 
-See the `esp_https_server` component documentation for details.
+少々長いタイトルですが、以前のTTGO T-CameraをESP-IDF & Eclipseで動かすでHTTP Serverを立ち上げPC or スマホからカメラ画像を取得してみました。
 
-Before using the example, open the project configuration menu (`idf.py menuconfig`) to configure Wi-Fi or Ethernet. See "Establishing Wi-Fi or Ethernet Connection" section in [examples/protocols/README.md](../README.md) for more details.
+今回はそれをHTTPS ServerにしてSSL通信してみます。ただし送受信するデータはカメラ画像ではなく文字データだけなのでESP32-WROVER(TTGO Camera)というタイトルになっています。ESP32-WROVER類なら何でもいいのですが私が持っているのがTTGO Cameraだけなのでこれを使っています。
 
-## Certificates
+また"PCと"と限定しているのはSSL通信するにはルート証明書(オレオレ証明書)というものをPCにしか登録を試していないのでPC限定になっています。
 
-You will need to approve a security exception in your browser. This is because of a self signed
-certificate; this will be always the case, unless you preload the CA root into your browser/system
-as trusted.
+最終目的がPCアプリとの通信なのでスマホはとりあえずスルーしています。
 
-You can generate a new certificate using the OpenSSL command line tool:
 
-```
-openssl req -newkey rsa:2048 -nodes -keyout prvtkey.pem -x509 -days 3650 -out cacert.pem -subj "/CN=ESP32 HTTPS server example"
-```
+sdkconfig→Example Connection Exampleのmyssidとmypasswordはご自身の環境のSSIDとPasswordを入力してください。
 
-Expiry time and metadata fields can be adjusted in the invocation.
-
-Please see the openssl man pages (man openssl-req) for more details.
-
-It is **strongly recommended** to not reuse the example certificate in your application;
-it is included only for demonstration.
+cacert.pemとprivate.pemはTemplateに入っているものなのでhttps://neocode.jp/2020/09/02/esp32-wroberttgo-camerahttps-serverpcsslesp-idf-eclipse/を参考に自分自身で作ってみてください。
