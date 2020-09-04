@@ -119,6 +119,15 @@ CONFIG_PARTITION_TABLE_MD5=y
 # end of Partition Table
 
 #
+# Example Configuration
+#
+CONFIG_MDNS_HOSTNAME="esp32-mdns"
+CONFIG_MDNS_INSTANCE="ESP32 with mDNS"
+# CONFIG_MDNS_RESOLVE_TEST_SERVICES is not set
+# CONFIG_MDNS_ADD_MAC_TO_HOSTNAME is not set
+# end of Example Configuration
+
+#
 # Example Connection Configuration
 #
 CONFIG_EXAMPLE_CONNECT_WIFI=y

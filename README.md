@@ -11,6 +11,7 @@
 
 最終目的がPCアプリとの通信なのでスマホはとりあえずスルーしています。
 
+ｍDNS(DNS名：esp32-mdns.local)にも対応しました。
 
 sdkconfig→Example Connection Exampleのmyssidとmypasswordはご自身の環境のSSIDとPasswordを入力してください。
 
