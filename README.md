@@ -11,7 +11,8 @@
 
 最終目的がPCアプリとの通信なのでスマホはとりあえずスルーしています。
 
-ｍDNS(DNS名：esp32-mdns.local)にも対応しました。
+・ｍDNS(DNS名：esp32-mdns.local)にも対応しました。  
+・POSTリクエストにも対応しました(エコーバック)。
 
 sdkconfig→Example Connection Exampleのmyssidとmypasswordはご自身の環境のSSIDとPasswordを入力してください。
 
