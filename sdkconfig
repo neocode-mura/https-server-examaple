@@ -119,13 +119,23 @@ CONFIG_PARTITION_TABLE_MD5=y
 # end of Partition Table
 
 #
-# Example Configuration
+# SoftAP Configuration
+#
+CONFIG_SOFTAP_SEL=y
+CONFIG_ESP_WIFI_SSID="myssid"
+CONFIG_ESP_WIFI_PASSWORD="mypassword"
+CONFIG_ESP_WIFI_CHANNEL=1
+CONFIG_ESP_MAX_STA_CONN=4
+# end of SoftAP Configuration
+
+#
+# mDNS Configuration
 #
 CONFIG_MDNS_HOSTNAME="esp32-mdns"
 CONFIG_MDNS_INSTANCE="ESP32 with mDNS"
 # CONFIG_MDNS_RESOLVE_TEST_SERVICES is not set
 # CONFIG_MDNS_ADD_MAC_TO_HOSTNAME is not set
-# end of Example Configuration
+# end of mDNS Configuration
 
 #
 # Example Connection Configuration
